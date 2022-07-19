@@ -1,0 +1,222 @@
+* {box-sizing: border-box}
+body {font-family:'Shadows Into Light', Times, serif}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  vertical-align: middle;
+  width: 100%;
+
+}
+  
+/* styling navbar */
+  .navbar {
+    width: 100%;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .navbar a {
+    color: white;
+    background-color: black;
+    font-family: 'Shadows Into Light', Times, serif;
+    float: left;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    width: 25%; /*Four links of equal widths */
+    text-align: center;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+
+  
+
+
+/* ---------slideshow------------- */
+
+.container {
+  position: relative;
+  /* max-width: 1000px; */
+  margin: auto;
+}
+
+/* Hide the images by default */
+.slides {
+  display: none;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.point {
+  text-align: center;
+}
+
+.active {
+  background-color: grey;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.motto {
+  text-align: center;
+  font-family: 'Shadows Into Light', Times, serif;
+  font-size: 15px;
+}
+
+/* Menu */
+h1{
+  text-align: center;
+  font-family: 'Shadows Into Light', Times, serif;
+  font-size: 40px;
+}
+.themenu {
+  background-color: transparent;
+  color: #000000;
+  padding: 20px;
+  font-size: 20px;
+}
+.menu-content{
+  margin: auto;
+  text-align: left;
+  width: 50%;
+  border: 1px solid #acadac;
+  padding: 10px;
+}
+@media screen and (max-width: 500px) {
+    .tab {
+      float: none;
+      display:table;
+    }
+  }
+
+.tab {
+  overflow: hidden;
+  background-color: transparent;
+  text-align: left;
+}
+.tab button {
+  background-color: inherit;
+  width: 32%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-family: 'Shadows Into Light', Times, serif;
+  font-size: 18px;
+}
+.tab button:hover {
+  background-color: grey;
+}
+.tab button.active {
+  background-color: #000000;
+  color: white;
+}
+.tablist {
+  display: none;
+  padding: 6px 12px;
+}
+.price {
+  background-color: transparent;
+  float: right;
+  color: #754848;
+}
+.detail {
+  color: #6c6c6c;
+}
+
+/* ----- about ------ */
+
+.about-container {
+  background-color: #ecdac1;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+.img_interior {
+  width: 100%;
+}
+
+/* ----- contact us ------ */
+
+.contact-container {
+  background-color: transparent;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+}
+
+input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Shadows Into Light', Times, serif;
+  font-size: 18px;
+}
+
+.book {
+  width: 50%;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Shadows Into Light', Times, serif;
+  font-size: 18px;
+}
+.book:hover {
+  background-color: #6c6c6c;
+  color: white;
+}
+#getBooked{
+  color: #2b972b;
+}
+
+/* ----- footer ------ */
+footer {
+  text-align: center;
+  padding: 2px;
+  background-color: black;
+  color: white;
+}

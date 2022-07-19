@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kau Restaurant</title>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shadows Into Light">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+     <!-- logo -->
+     <img class="logo" id="home" src="Images/Logo.png" alt="myLogo">
+
+     <br>
+      <!-- navbar -->
+      <div class="navbar">
+        <a class= "nav" href="#home">Home</a>
+        <a class= "nav" href="#menu">Menu</a>
+        <a class= "nav" href="#about">About</a>
+        <a class= "nav" href="#contact">Contact</a>
+      </div>
+
+      <!-- Home with slideshow-images -->
+      <div class="container">
+        <div class="slides fade">
+          <img src="Images/jamu.jpeg" alt="jamu">
+        </div>
+
+        <div class="slides fade">
+          <img src="Images/nasi-campur-bali.jpg" alt="nasicampur">
+        </div>
+
+        <div class="slides fade">
+          <img src="Images/Sate Lilit.jpg" alt="satay">
+        </div>
+          
+        <div class="slides fade">
+          <img src="Images/Lawar.jpg" alt="lawar">
+        </div>
+
+        <div class="slides fade">
+          <img src="Images/kolak-pisang-ubi.jpg" alt="kolak">
+        </div>
+      </div> 
+      </br>
+      
+      <div class="point">
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+        <span class="dots"></span>
+      </div>
+      
+
+      <!-- menu  -->
+
+      <div class="themenu" id="menu">
+        <div class="menu-content">
+          <h1>Our Menu</h1>
+          <hr>
+          <div class="tab">
+            <button class="tabmenu" onclick="openMenu(event,'Drinks')" id="defaultOpen">Drinks</button>
+            <button class="tabmenu" onclick="openMenu(event,'Main')">Main</button>
+            <button class="tabmenu" onclick="openMenu(event,'Sweet')">Sweets</button>
+            <hr>
+          </div>
+          
+          <!-- drinks -->
+          <div id="Drinks" class="tablist">
+            <h3>Jamu <span class="price">5.50</span></h3>
+            <p class="detail">Traditional magic drink made from turmeric, lime, honey</p>
+            <hr>
+
+            <h3>Coconut Water <span class="price">5.50</span></h3>
+            <p class="detail">Refreshing electrolytes drink</p>
+            <hr>
+
+            <h3>Coffee/Tea <span class="price">4.50</span></h3>
+            <p class="detail">Warm beverages served with traditional sweets</p>
+          </div>
+          
+          <!-- main -->
+          <div id="Main" class="tablist">
+            <h3>Lawar <span class="price">18.50</span></h3>
+            <p class="detail">Balinese styled salad with rich herbs and spices, served with steamead rice</p>
+            <hr>
+            <h3>Nasi Campur <span class="price">21.50</span></h3>
+            <p class="detail">A portion of rice surrounded with side dishes</p>
+            <hr>
+            <h3>Sate Lilit <span class="price">25.50</span></h3>
+            <p class="detail">Balinese traditional satay served with rice cake</p>
+          </div>
+
+          <!-- sweets -->
+          <div id="Sweet" class="tablist">
+            <h3>Jajanan Pasar <span class="price">7.50</span></h3>
+            <p class="detail">Assorted traditional Balinese sweet snacks</p>
+            <hr>
+            <h3>Kolak Pisang <span class="price">6.50</span></h3>
+            <p class="detail">Banana and sweet potato with coconut milk and palm sugar sauce</p>
+            <hr>
+            <h3>Klepon <span class="price">6.50</span></h3>
+            <p class="detail">Glutinous Rice Balls stuffed with melted coconut sugar and coated with salty coconut</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- about  -->
+      <br>
+      <div class="about-container" id="about">
+        <div class="about-content">
+          <h1>About</h1>
+          <p>The word "Kau" literally means Coconut Shell in Balinese. We picked this name as we believe 
+            coconuts associated with both physical happiness and spiritual well-being. Following that principal we would like
+            to reassure our customers feel the same way when they are enjoying their meal time at Kau Restaurant.
+          </p>
+          <img class="img_interior" src="Images/interior.jpeg" alt="interior_design">
+          <h1>Opening Hours</h1>
+          <p>Tuesday - Thursday 12:00 - 22:00</p>
+          <p>Friday - Saturday 12:00 - 23:00</p>
+          <p>Sun & Mon Closed</p>
+          <p></p>
+        </div>
+      </div>
+
+      <!-- contact us  -->
+
+      <div class="contact-container" id="contact">
+        <!-- <div class="contact-content"></div> -->
+          <h1>Contact Us</h1>
+          
+          <form id="bookForm">
+            <p>We are looking forward for your visit. Simply reserve a table by fill in the form below or call us at
+              041-234-56-78 for other inquiry.</p>
+              <input id="theirName" type="text" required name="name" placeholder="Your name.."/>
+              <br/>
+              <input id="theirQty" type="number" required name="quantity" min="1" max="10" placeholder="How many of you">
+              <br/>
+              <input id="theirDate" type="datetime-local" required name="date" placeholder="Date and time" value="">
+              <br/>
+              <input name="message" placeholder="Special request..." rows="10" cols="50"></input>
+              <br/>
+              <button class="book" type="submit" value= "Reset" onclick="clearForm()">Book a table</button>
+              <br/>
+              <p>PS: Please note our opening hours</p>
+          </form>
+          <p id="getBooked"></p>   
+      </div>
+
+      <!-- footer  -->
+      <footer class="footer">
+        <p>© Kau Restaurant 2022</p>
+      </footer>
+
+      <script src="script.js"></script>
+      
+    </body>
+</html>
